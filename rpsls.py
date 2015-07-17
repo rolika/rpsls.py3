@@ -29,11 +29,11 @@ def rpsls(players_choice):
     computers_choice = random.choice(valid_words)
 
     if players_choice.lower() in valid_words: #on valid input
-        print("Player:", players_choice.capitalize()) #display choices
-        print("Computer:", computers_choice.capitalize())
+        print("Player chooses", players_choice.capitalize()+".") #display choices
+        print("Computer chooses", computers_choice.capitalize()+".")
 
         if players_choice == computers_choice: #same entry
-            print("It's a tie!\n")
+            print("It's a draw!\n")
             return None #returns None
 
         winner, rule = getWinner(players_choice, computers_choice, rules)
